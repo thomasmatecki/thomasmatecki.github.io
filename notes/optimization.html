@@ -15,11 +15,24 @@
 	<body style="font-family:sans-serif">
 
     <h2>Linear Programming</h2>
-    <h4> Ex. 1:</h4>
-    <p> Given \(f(x) = x^TAx\)
+    <h4>Ex. 1:  Given \(f(x) = x^TCx\) and \(g(x) = b^Tx\), find critical points of \(f\) subject to \(g(x) = r\)</h4>
+    <p> 1) Set \( \nabla f(x) = \lambda \nabla g(x) \) and solve for \(x\) in terms of \(\lambda\).
 
+        $$ x^T(C^T + C) = \lambda g^T $$
+        $$ x^T  = \lambda g^T(C^T + C)^{-1}$$
+        $$ x  = \lambda ((C^T + C)^{-1})^Tg = \lambda ((C^T + C)^T)^{-1}g = \mathbf{\lambda (C + C^T)^{-1}g}$$
+
+        2) Substitute \(x\) in terms of \(\lambda\) into \(g(x) = r\) and solve for \(\lambda\).
+
+        $$b^T \lambda (C + C^T)^{-1}g = r$$
+        $$\lambda = (b^T)^{-1}r((C + C^T)^{-1}g)^{-1} = \mathbf{(b^T)^{-1}rg^{-1}(C + C^T)}$$
+
+        3) Substute \(\lambda\) in terms of \(r\) to determine \(x\) in terms of \(r\)
+
+        $$x = (b^T)^{-1}rg^{-1}(C + C^T)(C + C^T)^{-1}g = (b^T)^{-1}r$$
 
     </p>
+
 
 	</body>
 </html>
