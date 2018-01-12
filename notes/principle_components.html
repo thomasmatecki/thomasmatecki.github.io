@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+    <script type="text/javascript" 
+            async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <style>
+    section { 
+        display: block;
+    }
+    </style>
+  </head>
+	<body style="font-family:sans-serif">
+
+    <div style="display:none">
+        \(            
+            \newcommand{\argminI}{\mathop{\mathrm{argmin}}\nolimits}
+            \DeclareMathOperator*{\argminA}{arg\,min}
+            \newcommand{\argminD}{\arg\!\min}
+        \)
+    </div>
+    <h2>Notation and definitions</h2>
+    <ul>
+    <li>A matrix is denoted by a bold letter: \(\mathbf{X}\)</li>
+    <li>For a matrix \(\mathbf{X}\), the element in the \(i\)<sup>th</sup> row and \(j\)<sup>th</sup> column of \(\mathbf{X}\) is denoted \(x_{ij}\). An \(N \times p\) matrix 
+        \(\mathbf{X}\) may also be denoted:
+        $$
+        \mathbf{X} = 
+            \begin{bmatrix}
+                x_{11} & x_{12} & \dots & x_{1p} \\
+                x_{21} & x_{22} & \dots & x_{2p} \\
+                \vdots &        & \ddots& \vdots\\
+                x_{N1} & x_{N2} & \dots & x_{Np}
+            \end{bmatrix}
+        $$</li>
+    <li>A row vector is denoted by a single lower case bold letter: \(\mathbf{a}\). The vector representing the \(i\)<sup>th</sup> row of a matrix \(X\) is denoted  </li>
+    </ul>
+    
+    <h2>Principle Components</h2>
+    <p>Given an \(N \times p\) <a href="https://en.wikipedia.org/wiki/Data_matrix_(multivariate_statistics)">data matrix</a> \(X\), the objective of 
+        principle components analysis is to transform the rows of \(X\) to a new coordinate system in which the columns are uncorrelated.</p>
+
+        <p>\(
+                X = 
+                \begin{bmatrix}
+                    x_{11} & x_{12} & \dots & x_{1p} \\
+                    x_{21} & x_{22} & \dots & x_{2p} \\
+                    \vdots &        & \ddots& \vdots\\
+                    x_{N1} & x_{N2} & \dots & x_{Np}
+                \end{bmatrix}
+            
+            \)</p>   
+
+    <p>The object is to find a transformation from \(X\) to a matrix \(C\), which is made up of the <em>principle components</em> of \(X\).
+    </p>
+    
+    <p>The principle components are the column vectors \(C_i = Xe_i\) that satisfy
+
+        \(
+            e_i = \underset{e_i}{\mathrm{arg\min}} \left\{ \mathrm{var(C_i)} \right\}
+        \)
+
+    </p>
+       
+    
+
+
+	</body>
+</html>
+
